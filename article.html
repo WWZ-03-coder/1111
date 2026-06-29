@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章详情 | wwz的博客</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-camera"></i>
+                <span>wwz的博客</span>
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+                <a href="articles.html" class="nav-link">
+                    <i class="fas fa-newspaper"></i>
+                    <span>文章列表</span>
+                </a>
+                <a href="tags.html" class="nav-link">
+                    <i class="fas fa-tags"></i>
+                    <span>标签分类</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>关于我</span>
+                </a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 移动端菜单 -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-nav-link">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="articles.html" class="mobile-nav-link">
+                <i class="fas fa-newspaper"></i>
+                <span>文章列表</span>
+            </a>
+            <a href="tags.html" class="mobile-nav-link">
+                <i class="fas fa-tags"></i>
+                <span>标签分类</span>
+            </a>
+            <a href="about.html" class="mobile-nav-link">
+                <i class="fas fa-user"></i>
+                <span>关于我</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 文章详情页头 -->
+    <header class="article-header">
+        <div class="container">
+            <div class="article-header-content">
+                <div class="article-meta">
+                    <span class="article-category" id="article-category">编程</span>
+                    <span class="article-date" id="article-date">2024-01-15</span>
+                    <span class="article-views" id="article-views">
+                        <i class="far fa-eye"></i>
+                        <span>256</span>
+                    </span>
+                    <span class="article-reading-time" id="article-reading-time">
+                        <i class="far fa-clock"></i>
+                        <span>5分钟阅读</span>
+                    </span>
+                </div>
+                <h1 class="article-title" id="article-title">现代JavaScript开发最佳实践</h1>
+                <div class="article-tags" id="article-tags">
+                    <!-- 标签将通过JavaScript动态生成 -->
+                </div>
+                <div class="article-author">
+                    <div class="author-avatar-small">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop" alt="wwz">
+                    </div>
+                    <div class="author-details">
+                        <span class="author-name">wwz</span>
+                        <span class="author-bio">摄影师</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <div class="container">
+            <div class="article-content-wrapper">
+                <!-- 左侧：文章内容 -->
+                <article class="article-content">
+                    <!-- 文章特色图片 -->
+                    <div class="article-featured-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=400&fit=crop" alt="JavaScript开发" id="article-image">
+                    </div>
+
+                    <!-- 文章内容容器 -->
+                    <div class="article-body" id="article-body">
+                        <!-- Markdown内容将通过JavaScript渲染 -->
+                        <div class="markdown-content">
+                            <p>文章内容加载中...</p>
+                        </div>
+                    </div>
+
+                    <!-- 文章底部信息 -->
+                    <div class="article-footer">
+                        <div class="article-actions">
+                            <button class="action-btn like-btn" id="like-btn">
+                                <i class="far fa-heart"></i>
+                                <span>点赞</span>
+                                <span class="like-count" id="like-count">0</span>
+                            </button>
+                            <button class="action-btn share-btn" id="share-btn">
+                                <i class="fas fa-share-alt"></i>
+                                <span>分享</span>
+                            </button>
+                            <button class="action-btn save-btn" id="save-btn">
+                                <i class="far fa-bookmark"></i>
+                                <span>收藏</span>
+                            </button>
+                        </div>
+
+                        <!-- 版权信息 -->
+                        <div class="article-copyright">
+                            <p><strong>版权声明：</strong>本文为原创文章，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处。</p>
+                        </div>
+                    </div>
+
+                    <!-- 相关文章 -->
+                    <section class="related-articles">
+                        <h3 class="related-title">
+                            <i class="fas fa-link"></i>
+                            <span>相关文章</span>
+                        </h3>
+                        <div class="related-grid" id="related-articles">
+                            <!-- 相关文章将通过JavaScript动态加载 -->
+                        </div>
+                    </section>
+                </article>
+
+                <!-- 右侧：目录和相关信息 -->
+                <aside class="article-sidebar">
+                    <div class="sidebar-sticky">
+                        <!-- 文章目录 -->
+                        <section class="table-of-contents">
+                            <h3 class="toc-title">
+                                <i class="fas fa-list"></i>
+                                <span>文章目录</span>
+                            </h3>
+                            <nav class="toc-nav" id="table-of-contents">
+                                <!-- 目录将通过JavaScript动态生成 -->
+                            </nav>
+                        </section>
+
+                        <!-- 作者信息 -->
+                        <section class="article-author-info">
+                            <h3 class="widget-title">
+                                <i class="fas fa-user-edit"></i>
+                                <span>关于作者</span>
+                            </h3>
+                            <div class="author-card">
+                                <div class="author-avatar-sidebar">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" alt="wwz">
+                                </div>
+                                <div class="author-info-sidebar">
+                                    <h4>wwz</h4>
+                                    <p>摄影师，用镜头记录世界的美好</p>
+                                    <div class="author-stats">
+                                        <div class="stat">
+                                            <span class="stat-number">8</span>
+                                            <span class="stat-label">文章</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-number">156</span>
+                                            <span class="stat-label">点赞</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-number">5</span>
+                                            <span class="stat-label">年经验</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 上一篇/下一篇文章 -->
+                        <section class="article-navigation">
+                            <h3 class="widget-title">
+                                <i class="fas fa-exchange-alt"></i>
+                                <span>文章导航</span>
+                            </h3>
+                            <div class="nav-links">
+                                <a href="#" class="nav-link prev-link" id="prev-article">
+                                    <div class="nav-arrow">
+                                        <i class="fas fa-arrow-left"></i>
+                                    </div>
+                                    <div class="nav-content">
+                                        <span class="nav-label">上一篇</span>
+                                        <span class="nav-title" id="prev-title">Python数据分析入门指南</span>
+                                    </div>
+                                </a>
+                                <a href="#" class="nav-link next-link" id="next-article">
+                                    <div class="nav-content">
+                                        <span class="nav-label">下一篇</span>
+                                        <span class="nav-title" id="next-title">响应式网页设计技巧</span>
+                                    </div>
+                                    <div class="nav-arrow">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                </a>
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">wwz的博客</h3>
+                    <p class="footer-description">一个分享摄影技巧、作品和生活感悟的平台，用镜头发现世界的美好。</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="articles.html">文章列表</a></li>
+                        <li><a href="tags.html">标签分类</a></li>
+                        <li><a href="about.html">关于我</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">联系我</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> wwz@photography.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 中国 · 北京</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 wwz的博客. 保留所有权利.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">隐私政策</a>
+                    <a href="#">使用条款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化文章详情页面
+            initArticlePage();
+        });
+    </script>
+</body>
+</html>

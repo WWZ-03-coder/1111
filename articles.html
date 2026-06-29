@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章列表 | wwz的博客</title>
+    <meta name="description" content="浏览所有摄影文章，涵盖街拍、人像、风光、器材等主题">
+    <meta name="keywords" content="文章列表,摄影教程,摄影技巧,摄影器材">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/prism.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-camera"></i>
+                <span>wwz的博客</span>
+            </a>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>首页</span>
+                </a>
+                <a href="articles.html" class="nav-link active">
+                    <i class="fas fa-newspaper"></i>
+                    <span>文章列表</span>
+                </a>
+                <a href="tags.html" class="nav-link">
+                    <i class="fas fa-tags"></i>
+                    <span>标签分类</span>
+                </a>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-user"></i>
+                    <span>关于我</span>
+                </a>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 移动端菜单 -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-nav-link">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </a>
+            <a href="articles.html" class="mobile-nav-link active">
+                <i class="fas fa-newspaper"></i>
+                <span>文章列表</span>
+            </a>
+            <a href="tags.html" class="mobile-nav-link">
+                <i class="fas fa-tags"></i>
+                <span>标签分类</span>
+            </a>
+            <a href="about.html" class="mobile-nav-link">
+                <i class="fas fa-user"></i>
+                <span>关于我</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 文章列表页头 -->
+    <header class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">文章列表</h1>
+                <p class="page-subtitle">浏览所有摄影文章，按类别和时间排序</p>
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="category-filter"><i class="fas fa-filter"></i> 按类别筛选:</label>
+                        <select id="category-filter" class="filter-select">
+                            <option value="all">所有类别</option>
+                            <option value="街拍">街拍</option>
+                            <option value="人像摄影">人像摄影</option>
+                            <option value="风光摄影">风光摄影</option>
+                            <option value="器材评测">器材评测</option>
+                            <option value="后期教程">后期教程</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="sort-filter"><i class="fas fa-sort"></i> 排序方式:</label>
+                        <select id="sort-filter" class="filter-select">
+                            <option value="newest">最新发布</option>
+                            <option value="oldest">最早发布</option>
+                            <option value="popular">最多阅读</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <div class="container">
+            <!-- 文章列表 -->
+            <section class="articles-list">
+                <div class="articles-header">
+                    <h2 class="section-title">
+                        <i class="fas fa-file-alt"></i>
+                        <span id="articles-count">所有文章</span>
+                    </h2>
+                    <div class="view-toggle">
+                        <button id="grid-view-btn" class="view-btn active" title="网格视图">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button id="list-view-btn" class="view-btn" title="列表视图">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="articles-container grid-view" id="articles-container">
+                    <!-- 文章将通过JavaScript动态加载 -->
+                </div>
+
+                <div class="pagination" id="pagination">
+                    <!-- 分页导航将通过JavaScript动态生成 -->
+                </div>
+            </section>
+
+            <!-- 侧边栏 -->
+            <aside class="articles-sidebar">
+                <!-- 文章分类 -->
+                <section class="sidebar-widget">
+                    <h3 class="widget-title">
+                        <i class="fas fa-folder"></i>
+                        <span>文章分类</span>
+                    </h3>
+                    <ul class="categories-list">
+                        <li>
+                            <a href="#" class="category-link" data-category="all">
+                                <span class="category-name">全部文章</span>
+                                <span class="category-count">8</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="category-link" data-category="街拍">
+                                <span class="category-name">街拍</span>
+                                <span class="category-count">2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="category-link" data-category="人像摄影">
+                                <span class="category-name">人像摄影</span>
+                                <span class="category-count">2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="category-link" data-category="风光摄影">
+                                <span class="category-name">风光摄影</span>
+                                <span class="category-count">2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="category-link" data-category="器材评测">
+                                <span class="category-name">器材评测</span>
+                                <span class="category-count">1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="category-link" data-category="后期教程">
+                                <span class="category-name">后期教程</span>
+                                <span class="category-count">1</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- 热门标签 -->
+                <section class="sidebar-widget">
+                    <h3 class="widget-title">
+                        <i class="fas fa-fire"></i>
+                        <span>热门标签</span>
+                    </h3>
+                    <div class="hot-tags">
+                        <a href="tags.html?tag=街拍" class="hot-tag">街拍</a>
+                        <a href="tags.html?tag=人像" class="hot-tag">人像</a>
+                        <a href="tags.html?tag=风光" class="hot-tag">风光</a>
+                        <a href="tags.html?tag=构图" class="hot-tag">构图</a>
+                        <a href="tags.html?tag=光影" class="hot-tag">光影</a>
+                        <a href="tags.html?tag=器材" class="hot-tag">器材</a>
+                        <a href="tags.html?tag=后期" class="hot-tag">后期</a>
+                        <a href="tags.html?tag=调色" class="hot-tag">调色</a>
+                    </div>
+                </section>
+
+                <!-- 月度归档 -->
+                <section class="sidebar-widget">
+                    <h3 class="widget-title">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>月度归档</span>
+                    </h3>
+                    <ul class="archive-list">
+                        <li>
+                            <a href="#" class="archive-link">
+                                <span class="archive-month">2024年6月</span>
+                                <span class="archive-count">4篇</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="archive-link">
+                                <span class="archive-month">2024年5月</span>
+                                <span class="archive-count">2篇</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="archive-link">
+                                <span class="archive-month">2024年4月</span>
+                                <span class="archive-count">2篇</span>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">wwz的博客</h3>
+                    <p class="footer-description">一个分享摄影技巧、作品和生活感悟的平台，用镜头发现世界的美好。</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">快速链接</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="articles.html">文章列表</a></li>
+                        <li><a href="tags.html">标签分类</a></li>
+                        <li><a href="about.html">关于我</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">联系我</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-envelope"></i> wwz@photography.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 中国 · 北京</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 wwz的博客. 保留所有权利.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">隐私政策</a>
+                    <a href="#">使用条款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 初始化文章列表页面
+            initArticlesPage();
+        });
+    </script>
+</body>
+</html>

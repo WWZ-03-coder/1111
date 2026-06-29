@@ -1,0 +1,494 @@
+/* Prism.js 代码高亮主题 - 自定义风格 */
+
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+    color: #f8f8f2;
+    background: none;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 0.95em;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.6;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+/* 代码块 */
+pre[class*="language-"] {
+    padding: 1.2em;
+    margin: 1.5em 0;
+    overflow: auto;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: #2c3e50;
+}
+
+/* 行内代码 */
+:not(pre) > code[class*="language-"] {
+    padding: .2em .4em;
+    border-radius: .3em;
+    white-space: normal;
+    background: #34495e;
+    color: #ecf0f1;
+}
+
+/* 代码行号 */
+pre[class*="language-"].line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+    position: relative;
+    white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #495b6d;
+    user-select: none;
+}
+
+.line-numbers-rows > span {
+    display: block;
+    counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+    content: counter(linenumber);
+    color: #7f8c8d;
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+}
+
+/* Token 样式 */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.token.punctuation {
+    color: #95a5a6;
+}
+
+.token.namespace {
+    opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #e74c3c;
+}
+
+.token.boolean,
+.token.number {
+    color: #9b59b6;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #2ecc71;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #f39c12;
+    background: transparent;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #3498db;
+}
+
+.token.function,
+.token.class-name {
+    color: #1abc9c;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #e67e22;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+/* 行高亮 */
+pre[data-line] {
+    position: relative;
+    padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: inherit 0;
+    margin-top: 1em;
+    background: rgba(52, 152, 219, 0.1);
+    pointer-events: none;
+    line-height: inherit;
+    white-space: pre;
+}
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+    content: attr(data-start);
+    position: absolute;
+    top: .4em;
+    left: .6em;
+    min-width: 1em;
+    padding: 0 .5em;
+    background-color: rgba(52, 152, 219, 0.4);
+    color: #fff;
+    font: bold 65%/1.5 sans-serif;
+    text-align: center;
+    border-radius: 8px;
+    text-shadow: none;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.line-highlight[data-end]:after {
+    content: attr(data-end);
+    top: auto;
+    bottom: .4em;
+}
+
+/* 复制按钮 */
+.code-block-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #34495e;
+    padding: 8px 16px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 1px solid #495b6d;
+}
+
+.code-block-header .language-label {
+    color: #95a5a6;
+    font-size: 0.85em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.code-block-header .copy-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.code-block-header .copy-button:hover {
+    background: #2980b9;
+    transform: translateY(-1px);
+}
+
+.code-block-header .copy-button:active {
+    transform: translateY(0);
+}
+
+.code-block-header .copy-button.copied {
+    background: #2ecc71;
+}
+
+/* 命令行样式 */
+.language-bash .token.function {
+    color: #95a5a6;
+}
+
+.language-bash .token.operator {
+    color: #3498db;
+}
+
+/* JSON 样式 */
+.language-json .token.property {
+    color: #3498db;
+}
+
+.language-json .token.string {
+    color: #2ecc71;
+}
+
+.language-json .token.number {
+    color: #9b59b6;
+}
+
+.language-json .token.boolean {
+    color: #e74c3c;
+}
+
+.language-json .token.null {
+    color: #e67e22;
+}
+
+/* HTML 样式 */
+.language-html .token.tag {
+    color: #e74c3c;
+}
+
+.language-html .token.attr-name {
+    color: #3498db;
+}
+
+.language-html .token.attr-value {
+    color: #2ecc71;
+}
+
+/* CSS 样式 */
+.language-css .token.selector {
+    color: #3498db;
+}
+
+.language-css .token.property {
+    color: #1abc9c;
+}
+
+.language-css .token.string {
+    color: #2ecc71;
+}
+
+/* JavaScript 样式 */
+.language-javascript .token.keyword {
+    color: #e74c3c;
+}
+
+.language-javascript .token.function {
+    color: #3498db;
+}
+
+.language-javascript .token.string {
+    color: #2ecc71;
+}
+
+.language-javascript .token.number {
+    color: #9b59b6;
+}
+
+/* Python 样式 */
+.language-python .token.keyword {
+    color: #e74c3c;
+}
+
+.language-python .token.function {
+    color: #3498db;
+}
+
+.language-python .token.string {
+    color: #2ecc71;
+}
+
+.language-python .token.number {
+    color: #9b59b6;
+}
+
+.language-python .token.comment {
+    color: #7f8c8d;
+}
+
+/* SQL 样式 */
+.language-sql .token.keyword {
+    color: #e74c3c;
+}
+
+.language-sql .token.function {
+    color: #3498db;
+}
+
+.language-sql .token.string {
+    color: #2ecc71;
+}
+
+.language-sql .token.number {
+    color: #9b59b6;
+}
+
+/* Markdown 样式 */
+.language-markdown .token.title {
+    color: #3498db;
+    font-weight: bold;
+}
+
+.language-markdown .token.bold {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.language-markdown .token.italic {
+    color: #9b59b6;
+    font-style: italic;
+}
+
+.language-markdown .token.code {
+    color: #2ecc71;
+    background: rgba(46, 204, 113, 0.1);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    pre[class*="language-"] {
+        font-size: 0.85em;
+        padding: 1em;
+        margin: 1em 0;
+    }
+    
+    .line-numbers .line-numbers-rows {
+        font-size: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    pre[class*="language-"] {
+        font-size: 0.8em;
+        padding: 0.8em;
+    }
+    
+    .code-block-header {
+        padding: 6px 12px;
+        font-size: 0.9em;
+    }
+    
+    .code-block-header .copy-button {
+        padding: 4px 8px;
+        font-size: 0.8em;
+    }
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+    :not(pre) > code[class*="language-"],
+    pre[class*="language-"] {
+        background: #1a1a2e;
+    }
+    
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+        color: #6b7280;
+    }
+    
+    .token.punctuation {
+        color: #9ca3af;
+    }
+    
+    .token.property,
+    .token.tag,
+    .token.constant,
+    .token.symbol,
+    .token.deleted {
+        color: #ef4444;
+    }
+    
+    .token.boolean,
+    .token.number {
+        color: #8b5cf6;
+    }
+    
+    .token.selector,
+    .token.attr-name,
+    .token.string,
+    .token.char,
+    .token.builtin,
+    .token.inserted {
+        color: #10b981;
+    }
+    
+    .token.operator,
+    .token.entity,
+    .token.url,
+    .language-css .token.string,
+    .style .token.string {
+        color: #f59e0b;
+    }
+    
+    .token.atrule,
+    .token.attr-value,
+    .token.keyword {
+        color: #3b82f6;
+    }
+    
+    .token.function,
+    .token.class-name {
+        color: #06b6d4;
+    }
+    
+    .token.regex,
+    .token.important,
+    .token.variable {
+        color: #f97316;
+    }
+    
+    .line-numbers .line-numbers-rows {
+        border-right: 1px solid #374151;
+    }
+    
+    .line-numbers-rows > span:before {
+        color: #6b7280;
+    }
+}

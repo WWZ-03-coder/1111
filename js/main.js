@@ -1,0 +1,2274 @@
+// 个人博客主JavaScript文件
+
+// 博客文章数据
+const blogPosts = [
+    {
+        id: 1,
+        title: "街拍摄影技巧：捕捉城市的瞬间",
+        excerpt: "探索街拍的构图技巧、光影运用和抓拍时机，用相机记录城市生活的精彩瞬间。",
+        content: `# 街拍摄影技巧：捕捉城市的瞬间
+
+街头摄影是最真实、最直接的摄影形式之一。它不需要专业的影棚，不需要精心布置的灯光，只需要一双善于发现的眼睛和一台相机。
+
+## 1. 街拍的基础装备
+
+### 1.1 相机的选择
+街拍对相机的要求比较特殊，需要兼顾便携性和画质。
+
+- **紧凑型相机**：Fujifilm X100V、Ricoh GR IIIx 是最受欢迎的街拍相机
+- **微单相机**：Sony A7C、Fujifilm X-T5 搭配小巧定焦镜头
+- **镜头选择**：35mm（等效全画幅）是街拍的经典焦段
+
+\`\`\`
+推荐街拍配置：
+- 入门级：Ricoh GR IIIx（28mm等效）
+- 进阶级：Fujifilm X100V（35mm等效）
+- 专业级：Sony A7C + 35mm F2.8
+\`\`\`
+
+### 1.2 拍摄设置建议
+街拍时合理的相机设置能帮我们抓住决定性瞬间。
+
+\`\`\`settings
+- 快门优先模式（S/Tv）：1/125s以上
+- 光圈：F5.6-F11（保证景深）
+- ISO：自动（设置上限3200）
+- 对焦模式：AF-C连续对焦
+- 测光模式：矩阵/评价测光
+- 文件格式：RAW+JPEG
+\`\`\`
+
+## 2. 构图技巧
+
+### 2.1 引导线构图
+利用街道、建筑线条引导观众视线。
+
+好的引导线可以是：
+- 道路的延伸线
+- 建筑的轮廓线
+- 光影的分界线
+- 人群的流动方向
+
+### 2.2 框架构图
+利用自然框架让画面更有层次感。
+
+常见的框架元素：
+- 门窗和拱廊
+- 镜面反射
+- 树木枝条
+- 人群间隙
+
+### 2.3 黄金分割与三分法
+将主体放在画面三分之一的位置，创造更自然的视觉效果。
+
+\`\`\`
+黄金分割点位置：
+□□□□□□□□□□
+□□□●□□□□□□
+□□□□□□□□□□
+□□□□□□●□□□
+□□□□□□□□□□
+
+● = 视觉重点位置
+\`\`\`
+
+## 3. 光影运用
+
+### 3.1 寻找有趣的光线
+光影是街拍的灵魂，学会观察和等待好的光线。
+
+**黄金时段：**
+- 日出后1小时
+- 日落前1小时
+- 阴天（柔和光线适合人像街拍）
+
+**特殊光线场景：**
+- 逆光剪影
+- 侧光突出质感
+- 顶光下的几何阴影
+- 霓虹灯夜景
+
+### 3.2 黑白街拍
+黑白摄影能剥离色彩的干扰，让构图和光影更加纯粹。
+
+适合黑白处理的场景：
+- 强对比的光影场景
+- 有趣的几何形状
+- 表现质感的纹理
+- 人文纪实类题材
+
+## 4. 抓拍技巧
+
+### 4.1 决定性瞬间
+"决定性瞬间"是街拍的精髓——在事件发生的那一瞬间按下快门。
+
+**预判技巧：**
+1. 观察环境，找到有趣的光影或构图
+2. 预判人物可能的动作和走向
+3. 提前构图，等待主体进入画面
+4. 连续拍摄，捕捉最佳瞬间
+
+### 4.2 与被摄者的互动
+街拍中的人物拍摄需要技巧和尊重。
+
+\`\`\`tips
+- 保持微笑，展现友好态度
+- 拍摄后可以点头示意或微笑表示感谢
+- 如果被拍摄者表示不满，礼貌道歉并删除照片
+- 避免拍摄敏感场景或弱势群体
+- 在公共场所拍摄通常没有问题
+\`\`\`
+
+## 5. 后期处理建议
+
+### 5.1 Lightroom快速调整流程
+\`\`\`workflow
+1. 基础调整：曝光、对比度、高光、阴影
+2. 色调调整：色温、色调微调
+3. 细节增强：清晰度、去朦胧
+4. 颜色调整：HSL面板微调特定颜色
+5. 锐化和降噪
+6. 裁剪和构图微调
+\`\`\`
+
+### 5.2 街拍常用预设风格
+- **胶片风**：高对比度、颗粒感、偏暖色调
+- **日系清新**：低对比度、高明度、偏冷色调
+- **黑白经典**：高对比度黑白、强光影
+
+## 结论
+
+街头摄影是一门需要耐心和观察力的艺术。最好的相机就是随身携带的那一台，最好的照片就是下一张。多走出去，多观察，多拍摄，你一定能捕捉到城市中最动人的瞬间。
+
+记住，街拍不是为了拍出完美的照片，而是为了记录真实的生活。每一张街拍作品都是一个城市故事。`,
+        date: "2024-06-15",
+        category: "街拍",
+        tags: ["街拍", "构图技巧", "光影", "抓拍", "城市摄影"],
+        views: 312,
+        likes: 56,
+        readingTime: 6,
+        featured: true,
+        image: "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800&h=400&fit=crop"
+    },
+    {
+        id: 2,
+        title: "人像摄影入门：光影与构图",
+        excerpt: "从自然光到人造光，从黄金分割到引导线，掌握人像摄影的核心技巧。",
+        content: `# 人像摄影入门：光影与构图
+
+人像摄影是摄影中最受欢迎也最具挑战性的类别之一。本文将带你从光影和构图两个核心角度，系统学习人像摄影的基础知识。
+
+## 1. 光线基础
+
+### 1.1 自然光人像
+自然光是最容易获取也是最美丽的光源。
+
+**最佳拍摄时间：**
+- 黄金时刻（日出后1小时/日落前1小时）
+- 蓝调时刻（日落后的20-30分钟）
+- 阴天（柔和的散射光）
+
+**不同光线方向的效果：**
+\`\`\`
+正面光：面部细节清晰，但缺乏立体感
+45°侧光：经典人像布光，突出面部轮廓
+90°侧光：强烈的戏剧效果，适合表现个性
+逆光：梦幻的发丝光效果，需要补光
+顶光：通常需要避免，会产生难看的阴影
+\`\`\`
+
+### 1.2 利用反光板
+反光板是人像摄影中最简单有效的补光工具。
+
+**反光板使用技巧：**
+\`\`\`
+银色面：反射强光，适合远距离补光
+金色面：反射暖色调光，适合营造氛围
+白色面：反射柔和光，适合近距离补光
+柔光面：柔化强光，适合正午拍摄
+\`\`\`
+
+### 1.3 窗口光的运用
+窗户是最好的自然光源之一。
+
+\`\`\`tips
+- 让模特侧对窗户，产生经典的伦勃朗光
+- 使用白色窗帘柔化光线
+- 被摄者距离窗户1-2米效果最佳
+- 在窗户另一侧放置反光板补充阴影
+\`\`\`
+
+## 2. 构图技巧
+
+### 2.1 景别选择
+不同的景别传达不同的情感和氛围。
+
+\`\`\`composition
+特写：突出五官和表情，拍摄面部细节
+近景：胸部以上，适合表现人物神态
+中景：腰部以上，兼顾人物和部分环境
+全景：全身，强调人物与环境的互动
+环境人像：人物占画面较小比例，突出环境故事
+\`\`\`
+
+### 2.2 经典构图法则
+**三分法**：将人物放在画面的三分之一处。
+
+**引导线**：利用环境中的线条引导视线到人物。
+
+**框架构图**：利用门窗、树枝等元素框住人物。
+
+**对称构图**：适合正式肖像或对称环境。
+
+### 2.3 留白的艺术
+适当的留白能让画面更有呼吸感。
+
+留白的运用：
+- 人物视线方向留出空间
+- 上方留白营造空间感
+- 下方留白适合表现环境
+
+## 3. 拍摄技巧
+
+### 3.1 对焦技巧
+人像摄影中对焦的黄金法则是——对焦在眼睛上。
+
+\`\`\`settings
+- 使用单点对焦
+- 选择眼部自动对焦（如果相机支持）
+- 光圈控制在F1.4-F2.8之间（突出主体）
+- 快门速度不低于1/125s
+\`\`\`
+
+### 3.2 与模特的沟通
+良好的沟通是拍出好照片的关键。
+
+**沟通技巧：**
+1. 拍摄前先聊天，让模特放松
+2. 给予具体指导（"下巴稍微低一点"）
+3. 展示拍摄效果，建立信心
+4. 播放音乐营造氛围
+5. 在模特状态最好的时候拍摄
+
+### 3.3 抓拍自然表情
+摆拍往往显得僵硬，学会引导自然表情。
+
+\`\`\`technique
+- 让模特做动作而不是摆姿势
+- 在模特调整姿势的间隙抓拍
+- 讲个笑话捕捉真实的笑容
+- 让模特看向别处再回看镜头
+- 连拍模式捕捉最佳表情
+\`\`\`
+
+## 4. 场景选择
+
+### 4.1 城市街拍人像
+街道是天然的人像摄影棚。
+
+**适合的场景：**
+- 有质感的砖墙或涂鸦墙
+- 咖啡馆和书店
+- 有特色的小巷
+- 天桥和楼梯
+- 现代建筑线条
+
+### 4.2 自然风光人像
+在自然环境中拍摄人像，让人物融入风景。
+
+**黄金法则：**
+- 选择柔和光线的时段
+- 注意背景不要杂乱
+- 人物的服装颜色与环境协调
+- 利用自然环境作为框架
+
+## 5. 后期处理
+
+### 5.1 皮肤处理
+\`\`\`lightroom
+- 减少清晰度（Clarity）使皮肤更柔和
+- 使用HSL面板调整肤色
+- 适当降噪
+- 保留皮肤纹理，不要过度磨皮
+\`\`\`
+
+### 5.2 色调风格
+**日系清新人像：**
+- 高亮部偏青
+- 阴影偏绿
+- 整体高调明亮
+- 肤色偏粉白
+
+**复古胶片人像：**
+- 整体偏暖
+- 对比度适中
+- 增加颗粒感
+- 暗部偏绿或偏红
+
+## 结论
+
+人像摄影的核心是捕捉人物的神韵和情感。技术只是工具，真正打动人心的永远是照片中那份真实的情感。多拍、多看、多思考，你的人像摄影水平一定会不断提升。
+
+记住，好的人像照片不在于模特有多漂亮，而在于你能否捕捉到最真实、最有感染力的一瞬间。`,
+        date: "2024-06-10",
+        category: "人像摄影",
+        tags: ["人像", "光影", "构图", "自然光", "后期"],
+        views: 289,
+        likes: 48,
+        readingTime: 7,
+        featured: true,
+        image: "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=400&fit=crop"
+    },
+    {
+        id: 3,
+        title: "旅行摄影装备推荐",
+        excerpt: "从入门到专业，为你推荐最适合旅行拍摄的相机、镜头和配件。",
+        content: `# 旅行摄影装备推荐
+
+旅行摄影是很多人热爱摄影的初衷。面对琳琅满目的摄影器材，如何选择最适合旅行携带的装备？本文从不同需求出发，为你推荐旅行摄影装备方案。
+
+## 1. 轻便出行方案
+
+### 1.1 手机摄影
+现代旗舰手机的摄影能力已经非常出色，完全能满足大部分旅行记录需求。
+
+**推荐的手机：**
+- iPhone 15 Pro Max：视频拍摄王者
+- Samsung Galaxy S24 Ultra：长焦表现出色
+- Xiaomi 14 Ultra：徕卡影像系统
+
+**手机摄影配件：**
+- 三脚架：小型桌面三脚架
+- 手机镜头：广角/微距附加镜头
+- 移动电源：保证全天拍摄
+- 手机夹：方便接驳三脚架
+
+### 1.2 口袋相机
+如果你想要比手机更好的画质，又不想背大相机。
+
+\`\`\`推荐
+1. Sony RX100 VII - 1英寸底，24-200mm变焦
+2. Ricoh GR IIIx - APS-C画幅，28mm定焦
+3. Fujifilm X100V - APS-C画幅，35mm定焦，复古外观
+\`\`\`
+
+## 2. 进阶旅行方案
+
+### 2.1 微单相机推荐
+微单相机是旅行摄影的最佳平衡——画质与便携兼顾。
+
+**不同预算推荐：**
+
+\`\`\`
+5000-8000元：
+- Sony ZV-E10 + 16-50mm套头
+- Fujifilm X-T30 II + 15-45mm套头
+
+8000-15000元：
+- Sony A7C + 28-60mm套头
+- Fujifilm X-T5 + 18-55mm套头
+- Canon R8 + 24-50mm套头
+
+15000元以上：
+- Sony A7R V + 24-70mm GM II
+- Nikon Z8 + 24-120mm F4 S
+\`\`\`
+
+### 2.2 镜头搭配方案
+旅行中合理搭配镜头，既能覆盖各种场景，又不会太重。
+
+**一镜走天下方案：**
+- 全画幅：24-200mm或28-200mm
+- APS-C：18-135mm或16-80mm
+
+**双镜头方案：**
+\`\`\`组合
+方案一（风光为主）：16-35mm + 70-200mm
+方案二（人文为主）：24-70mm + 85mm F1.8
+方案三（轻便方案）：28mm F2.8 + 50mm F1.8
+\`\`\`
+
+## 3. 必备配件
+
+### 3.1 三脚架
+旅行三脚架需要在稳定性和便携性之间平衡。
+
+**推荐选择：**
+- 碳纤维材质（轻便但较贵）
+- 收纳长度 < 40cm
+- 最大高度 > 150cm
+- 承重 > 3kg
+
+**推荐型号：**
+- Gitzo Traveler系列（高端）
+- Manfrotto Befree系列（中端）
+- 国产性价比品牌（入门）
+
+### 3.2 相机包
+好的相机包能让你在旅行中轻松携带装备。
+
+\`\`\`选择要点
+1. 容量：根据装备数量选择
+2. 背负系统：好的肩带和腰带
+3. 防护性：防雨罩和缓冲层
+4. 便利性：侧面快取设计
+5. 防盗：隐蔽设计和锁扣
+\`\`\`
+
+### 3.3 滤镜系统
+在旅行摄影中，几种滤镜非常实用。
+
+**CPL偏振镜：**
+- 消除水面和玻璃反光
+- 增强天空蓝色饱和度
+- 减少树叶表面反光
+
+**ND减光镜：**
+- 拍摄流水雾化效果
+- 白天长曝光
+- 视频拍摄控制快门
+
+**GND渐变镜：**
+- 平衡天空和地面光比
+- 日出日落必备
+
+## 4. 不同场景装备方案
+
+### 4.1 城市旅行
+\`\`\`city
+相机：一台轻便微单
+镜头：24-70mm或等效变焦
+配件：备用电池、充电器、清洁套装
+特别建议：携带一个轻便的斜跨相机包
+\`\`\`
+
+### 4.2 自然风光
+\`\`\`nature
+相机：高像素全画幅相机
+镜头：16-35mm + 70-200mm
+配件：三脚架、滤镜套装、快门线
+特别建议：多带电池，寒冷环境耗电快
+\`\`\`
+
+### 4.3 人文纪实
+\`\`\`documentary
+相机：低调的小型相机
+镜头：35mm或50mm定焦
+配件：小型录音笔（记录声音素材）
+特别建议：保持低调，尊重当地文化
+\`\`\`
+
+## 5. 器材保养
+
+**旅行中的器材保养要点：**
+
+1. **防潮防尘**：携带密封袋和干燥剂
+2. **防震防摔**：使用相机内胆包
+3. **镜头清洁**：携带气吹和镜头布
+4. **电池管理**：寒冷环境注意保温
+5. **数据备份**：携带移动硬盘或平板电脑
+
+## 结论
+
+选择旅行摄影装备最重要的是——带上你愿意一直背着的相机。最好的装备不是参数最好的，而是最适合你旅行方式的。
+
+记住，器材只是工具，真正重要的是你看到的风景和记录下来的故事。轻装上阵，用心感受，拍出属于你的旅行记忆。`,
+        date: "2024-06-05",
+        category: "器材评测",
+        tags: ["器材", "旅行", "相机推荐", "镜头", "配件"],
+        views: 256,
+        likes: 42,
+        readingTime: 7,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=800&h=400&fit=crop"
+    },
+    {
+        id: 4,
+        title: "后期调色入门：Lightroom基础",
+        excerpt: "系统学习Lightroom后期调色流程，从导入到导出，掌握调色的核心逻辑和技巧。",
+        content: `# 后期调色入门：Lightroom基础
+
+后期处理是数码摄影不可或缺的一部分。掌握Lightroom不仅能提升照片质量，更能帮你形成独特的个人风格。
+
+## 1. Lightroom工作流程
+
+### 1.1 导入照片
+合理的导入流程是高效后期的基础。
+
+\`\`\`workflow
+1. 连接存储卡或硬盘
+2. 选择导入目标文件夹
+3. 设置文件重命名规则
+4. 应用基础预设（可选）
+5. 创建智能预览
+6. 添加关键词和元数据
+\`\`\`
+
+### 1.2 目录管理
+良好的目录管理能帮你快速找到需要的照片。
+
+**推荐目录结构：**
+\`\`\`
+📁 Photography/
+  📁 2024/
+    📁 2024-06-15_北京街拍/
+    📁 2024-06-10_上海外滩/
+  📁 2023/
+    📁 2023-12-20_日本旅行/
+\`\`\`
+
+## 2. 基础调整面板
+
+### 2.1 基本校正
+掌握基本调整面板的每个滑块。
+
+\`\`\`basics
+色温：调整画面冷暖（朝左偏蓝，朝右偏黄）
+色调：调整画面绿色/品红偏移
+曝光度：整体亮度调整（-4到+4）
+对比度：明暗反差程度
+高光：最亮部分的细节恢复
+阴影：最暗部分的细节提亮
+白色色阶：画面的最亮端点
+黑色色阶：画面的最暗端点
+清晰度：中间调对比度
+去朦胧：消除雾气，增加通透感
+鲜艳度：智能饱和度调整
+饱和度：全局饱和度调整
+\`\`\`
+
+### 2.2 实战调整流程
+
+**第一步：全局校正**
+1. 调整白平衡（可以使用吸管工具）
+2. 恢复高光和阴影细节
+3. 调整曝光度到合适水平
+4. 增加适当的对比度
+
+**第二步：色调微调**
+1. 使用色调曲线微调
+2. HSL面板调整特定颜色
+3. 增加暗角突出主体
+4. 使用渐变滤镜调整局部
+
+**第三步：细节处理**
+1. 锐化适当（100%查看）
+2. 降噪处理（高ISO照片）
+3. 去除污点
+
+\`\`\`example
+实战案例：风光照片调色
+
+原始问题：照片偏灰，缺乏氛围
+
+调整步骤：
+1. 曝光度 +0.3
+2. 对比度 +25
+3. 高光 -50（恢复天空细节）
+4. 阴影 +40（提亮暗部）
+5. 白色色阶 +10
+6. 黑色色阶 -10
+7. 清晰度 +15
+8. 去朦胧 +20
+9. 鲜艳度 +10
+10. 天空使用渐变滤镜降低曝光
+\`\`\`
+
+## 3. 调色风格
+
+### 3.1 日系清新风格
+**特点：** 明亮、通透、偏冷调
+
+\`\`\`
+白平衡：偏蓝（色温4800K左右）
+曝光度：偏亮（+0.3到+0.7）
+对比度：偏低（-10到+10）
+高光：降低保留细节（-30）
+阴影：大幅提亮（+50）
+色调曲线：S型但较平缓
+HSL蓝色：降低明亮度
+暗角：轻微添加
+\`\`\`
+
+### 3.2 复古胶片风格
+**特点：** 暖调、颗粒感、低饱和度
+
+\`\`\`
+白平衡：偏暖（色温6000K左右）
+色调：偏绿（+5到+10）
+对比度：偏高（+20到+30）
+高光：降低（-20）
+阴影：提高（+20）
+颗粒：添加30-50
+暗角：明显添加
+HSL红色：偏橙
+HSL绿色：偏黄
+\`\`\`
+
+### 3.3 黑白色调
+**特点：** 强调光影和质感
+
+\`\`\`
+转换黑白模式
+红色：提亮肤色
+橙色：提亮肤色
+黄色：提亮绿色植物
+绿色：控制草地亮度
+蓝色：控制天空亮度
+对比度：偏高一档
+清晰度：增加（+20）
+颗粒：增加质感
+\`\`\`
+
+## 4. 局部调整工具
+
+### 4.1 渐变滤镜
+适合处理天空和前景的光比。
+
+应用场景：
+- 压暗天空
+- 提亮前景
+- 营造氛围光线
+
+### 4.2 径向滤镜
+适合突出主体或局部提亮。
+
+应用场景：
+- 提亮人物面部
+- 压暗画面边缘
+- 突出特定元素
+
+### 4.3 调整画笔
+最精细的局部调整工具。
+
+应用场景：
+- 局部提亮眼睛
+- 调整特定区域颜色
+- 修复局部曝光问题
+
+## 5. 导出设置
+
+\`\`\`export
+Web分享设置：
+- 文件格式：JPEG
+- 品质：80-90%
+- 色彩空间：sRGB
+- 长边：2048-3840px
+- 锐化：屏幕标准
+
+打印设置：
+- 文件格式：TIFF
+- 色彩空间：Adobe RGB或ProPhoto RGB
+- 分辨率：300dpi
+- 锐化：打印高
+\`\`\`
+
+## 结论
+
+后期调色是一个需要不断练习的过程。没有所谓的"正确"调色，只有最适合照片风格和个人审美的调色。多看优秀的作品，多调多试，你一定能找到属于自己的调色风格。
+
+记住，后期是摄影的创作过程，不是修复过程。前期拍摄的质量决定了后期的上限。养成良好拍摄习惯，配合后期技巧，才能创作出优秀的作品。`,
+        date: "2024-06-01",
+        category: "后期教程",
+        tags: ["后期", "调色", "Lightroom", "预设", "色彩管理"],
+        views: 198,
+        likes: 36,
+        readingTime: 8,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&h=400&fit=crop"
+    },
+    {
+        id: 5,
+        title: "风光摄影中的长曝光技巧",
+        excerpt: "掌握长曝光摄影的核心技巧，拍摄出如丝般的流水和梦幻的云彩效果。",
+        content: `# 风光摄影中的长曝光技巧
+
+长曝光是风光摄影中最迷人的技术之一。它能将流动的水面变成丝绸，将飘动的云彩变成流线，创造出超越人眼视觉极限的梦幻效果。
+
+## 1. 必备装备
+
+### 1.1 三脚架
+长曝光拍摄的第一要务是绝对的稳定。
+
+**选择要点：**
+- 碳纤维材质（轻便且减震好）
+- 重量不低于1.2kg
+- 最大高度达到视线水平
+- 挂钩可以悬挂重物增加稳定性
+
+### 1.2 快门线
+避免触碰相机导致震动。
+
+**推荐类型：**
+- 有线快门线：最可靠
+- 无线遥控器：方便
+- 手机APP控制：部分相机支持
+
+### 1.3 ND滤镜
+ND滤镜是长曝光的核心配件。
+
+\`\`\`选择指南
+ND8 (3档)：1/4秒 → 2秒（轻度模糊）
+ND64 (6档)：1/4秒 → 16秒（明显效果）
+ND1000 (10档)：1/4秒 → 4分钟（极致平滑）
+
+推荐品牌：
+- Lee Filters（高端）
+- NiSi（中高端）
+- Haida（高性价比）
+- Kase（套装推荐）
+\`\`\`
+
+## 2. 拍摄设置
+
+### 2.1 曝光计算
+使用ND滤镜后，需要相应延长快门时间。
+
+\`\`\`公式
+无滤镜快门速度 × ND滤镜倍数 = 最终快门速度
+
+例如：
+无滤镜：1/60秒
+使用ND64（64倍）：1/60 × 64 ≈ 1秒
+使用ND1000（1000倍）：1/60 × 1000 ≈ 17秒
+\`\`\`
+
+### 2.2 相机设置
+\`\`\`settings
+- 拍摄模式：手动（M档）
+- ISO：最低原生ISO（通常ISO 100）
+- 光圈：F8-F16（保证景深）
+- 对焦：手动对焦，关闭自动对焦
+- 防抖：关闭镜身防抖
+- 快门：使用B门或30秒以上
+- 文件格式：RAW
+\`\`\`
+
+### 2.3 对焦技巧
+**正确步骤：**
+1. 先安装ND滤镜前对焦
+2. 切换手动对焦模式
+3. 再安装ND滤镜
+4. 锁定对焦位置
+
+## 3. 拍摄场景
+
+### 3.1 流水长曝光
+适合拍摄瀑布、溪流、海浪。
+
+**不同快门速度的效果：**
+\`\`\`
+1-2秒：水面的轻微雾化
+5-10秒：明显的丝绸效果
+30秒以上：完全雾化，如仙境般
+\`\`\`
+
+### 3.2 云彩长曝光
+适合拍摄天空云彩流动。
+
+**建议参数：**
+- 使用ND64或ND1000
+- 曝光时间30秒到2分钟
+- 注意风向和云速
+
+### 3.3 车流光轨
+城市夜景中的经典长曝光题材。
+
+\`\`\`city
+拍摄位置：天桥或高层建筑
+快门时间：5-30秒
+光圈：F8-F11
+ISO：100-200
+拍摄时段：蓝调时刻（日落前后）
+\`\`\`
+
+## 4. 常见问题
+
+### 4.1 色偏问题
+ND滤镜可能导致轻微色偏。
+
+**解决方法：**
+- 使用高质量ND滤镜
+- RAW格式拍摄，后期校正
+- 自定义白平衡
+
+### 4.2 暗角问题
+多片滤镜叠加可能导致暗角。
+
+**解决方法：**
+- 使用大口径滤镜
+- 缩小光圈两档
+- 后期裁剪或校正
+
+### 4.3 倒易率失效
+超长曝光时，胶片的倒易率会失效。
+
+**数码相机应对：**
+- 曝光时间超过30秒注意
+- 适当增加曝光补偿
+- 拍摄测试照片检查
+
+## 结论
+
+长曝光是风光摄影中最能展现创造力的技术之一。虽然需要一些额外的装备和耐心，但拍摄出的效果绝对值得付出。
+
+记住，最好的长曝光作品往往在光线条件不太理想的时候创作——阴天、日出前、日落后，这些时候反而能拍出最独特的作品。`,
+        date: "2024-05-20",
+        category: "风光摄影",
+        tags: ["风光", "长曝光", "ND滤镜", "三脚架", "流水"],
+        views: 178,
+        likes: 34,
+        readingTime: 6,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&h=400&fit=crop"
+    },
+    {
+        id: 6,
+        title: "夜景摄影完全指南",
+        excerpt: "从城市夜景到星空摄影，系统学习夜间拍摄的参数设置和创作技巧。",
+        content: `# 夜景摄影完全指南
+
+当太阳落山，城市的灯光亮起，夜空中的星星开始闪烁——这正是夜景摄影的魅力所在。
+
+## 1. 夜景摄影基础
+
+### 1.1 必备装备
+\`\`\`装备清单
+- 稳定的三脚架
+- 快门线或遥控器
+- 头灯或手电筒
+- 备用电池（低温耗电快）
+- 保暖衣物（夜间温度低）
+\`\`\`
+
+### 1.2 最佳拍摄时间
+夜景摄影有两个黄金时间段：
+
+**蓝调时刻（Blue Hour）：**
+- 日落后15-30分钟
+- 天空呈现深邃的蓝色
+- 城市灯光刚刚亮起
+- 天空和地面光比最平衡
+
+**深夜时段：**
+- 完全天黑后
+- 城市灯火辉煌
+- 适合拍摄车流光轨
+- 适合星空摄影
+
+## 2. 城市夜景
+
+### 2.1 相机设置
+\`\`\`参数
+拍摄模式：手动（M档）
+光圈：F8-F11（最佳画质）
+ISO：100-400（尽量低）
+快门速度：1-30秒（根据光线）
+白平衡：自动或荧光灯模式
+文件格式：RAW
+\`\`\`
+
+### 2.2 拍摄技巧
+**避免过曝：**
+城市夜景的灯光容易过曝，需要：
+- 适当降低曝光补偿
+- 查看直方图确保高光不溢出
+- 后期可以提亮暗部
+
+**画面构图：**
+- 寻找制高点拍摄城市全景
+- 利用水面倒影增加层次
+- 以街道灯光作为引导线
+- 拍摄建筑灯光和天空的对比
+
+### 2.3 蓝调时刻拍摄
+蓝调时刻是拍摄城市夜景的最佳时机。
+
+\`\`\`timeline
+日落时分：开始准备站位
+日落+10分钟：天空开始变蓝
+日落+20分钟：最佳拍摄时间
+日落+30分钟：蓝色渐渐消失
+日落+45分钟：完全天黑
+\`\`\`
+
+## 3. 星空和银河
+
+### 3.1 银河拍摄参数
+\`\`\`settings
+镜头：广角大光圈（F1.4-F2.8）
+快门：500/焦距法则（不超过25秒）
+ISO：1600-6400
+对焦：手动对焦到无限远
+白平衡：4000K左右
+间隔拍摄：延时摄影的基础
+\`\`\`
+
+### 3.2 寻找银河
+**最佳条件：**
+- 无月或新月之夜
+- 远离光污染
+- 天气晴朗无云
+- 夏季银河最为明亮
+
+**推荐APP：**
+- PhotoPills
+- Star Walk 2
+- Stellarium
+
+### 3.3 星空人像
+在星空下拍摄人像，浪漫而震撼。
+
+\`\`\`technique
+1. 先拍摄银河
+2. 使用闪光灯或手电筒补光人物
+3. 人物保持静止15-20秒
+4. 或者使用后帘同步闪光
+\`\`\`
+
+## 4. 创意夜景
+
+### 4.1 光绘摄影
+利用长时间曝光，用光源在画面中"绘画"。
+
+**所需工具：**
+- 手电筒（各种颜色）
+- LED发光棒
+- 钢丝棉（专业使用）
+- 彩色滤镜
+
+**拍摄方法：**
+1. 设置B门
+2. 打开快门
+3. 在镜头前绘制图案
+4. 关闭快门
+
+### 4.2 月亮摄影
+拍摄月亮需要不同的技术。
+
+\`\`\`moon
+- 使用长焦镜头（200mm以上）
+- 快门速度不低于1/125s（月亮移动快）
+- 使用点测光
+- 拍摄地景和月亮分开曝光
+- 后期合成
+\`\`\`
+
+## 5. 后期处理
+
+### 5.1 降噪处理
+夜景照片的噪点是最大挑战。
+
+\`\`\`lightroom
+- 亮度降噪：30-60
+- 颜色降噪：20-40
+- 细节保留：50-70
+- 对比度：适当增加
+
+使用专用降噪软件效果更好：
+- Topaz Denoise AI
+- DxO PureRAW
+\`\`\`
+
+### 5.2 色调调整
+\`\`\`调整建议
+- 适当降低色温（夜景偏暖）
+- 增加对比度
+- 降低高光（灯光不过曝）
+- 提亮阴影（暗部细节）
+- 增加清晰度
+- 适当减少饱和度（保持自然）
+\`\`\`
+
+## 结论
+
+夜景摄影虽然比白天拍摄更具挑战性，但其独特的视觉效果是白天无法比拟的。掌握夜景摄影，就等于拥有了一双能在黑暗中看见美的眼睛。
+
+记住，安全第一——夜间拍摄时一定要注意人身和器材安全。结伴而行，提前踩点，做好充分准备。`,
+        date: "2024-05-10",
+        category: "风光摄影",
+        tags: ["夜景", "星空", "城市风光", "光绘", "蓝调"],
+        views: 245,
+        likes: 52,
+        readingTime: 7,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&h=400&fit=crop"
+    },
+    {
+        id: 7,
+        title: "手机摄影：拍出专业感",
+        excerpt: "掌握手机摄影的核心技巧，让手机也能拍出堪比相机的专业照片。",
+        content: `# 手机摄影：拍出专业感
+
+最好的相机就是你随身携带的那一台。如今，手机摄影已经成为大多数人记录生活、创作作品的首选方式。
+
+## 1. 手机相机设置
+
+### 1.1 使用专业模式
+大多数手机都有专业/手动模式，这是提升画质的关键。
+
+\`\`\`settings
+测光方式：矩阵测光（日常）、点测光（逆光）
+ISO：尽量低（100-400）
+快门速度：安全快门以上
+对焦方式：AF-C（连续对焦）
+白平衡：根据光源选择或自定义
+文件格式：RAW或HEIF（如果有）
+\`\`\`
+
+### 1.2 曝光控制
+手机自动曝光不一定准确，学会手动控制曝光。
+
+**曝光补偿：**
+- 亮背景（雪景、天空）：+0.3到+0.7
+- 暗背景（夜景、暗调）：-0.3到-0.7
+- 逆光人像：+1.0以上
+
+**锁定曝光/对焦：**
+长按屏幕锁定曝光和对焦，然后重新构图拍摄。
+
+## 2. 构图技巧
+
+### 2.1 开启网格线
+在手机设置中开启网格线，帮助三分法构图。
+
+### 2.2 低角度拍摄
+手机的小巧体型让低角度拍摄变得异常简单。
+
+**低角度的优势：**
+- 夸张的地面元素
+- 人物显得更高大
+- 独特的透视效果
+- 引导线更加突出
+
+### 2.3 利用手机优势
+**俯拍：** 适合美食、产品、平面设计
+
+**贴近拍摄：** 手机的小传感器有更大的景深范围
+
+**翻转屏幕：** 自拍或低角度拍摄更方便
+
+## 3. 光线运用
+
+### 3.1 避免数码变焦
+数码变焦会严重损失画质。
+
+**正确做法：**
+- 靠近被摄物
+- 使用更高像素模式裁剪
+- 后期裁剪（RAW格式）
+
+### 3.2 人像模式的使用
+人像模式（虚化模式）能模拟大光圈效果。
+
+\`\`\`tips
+- 保持1-2米拍摄距离
+- 被摄物与背景有距离
+- 选择对比明显的背景
+- 边缘复杂的物体效果不太理想
+- 可以后期调整虚化程度
+\`\`\`
+
+## 4. 后期处理
+
+### 4.1 手机后期APP推荐
+- Lightroom Mobile：最专业的手机后期
+- Snapseed：Google出品，功能强大
+- VSCO：胶片风格预设
+- 醒图：国产优质修图软件
+
+### 4.2 快速后期流程
+\`\`\`workflow
+1. 裁剪和二次构图
+2. 调整曝光和对比度
+3. 校正白平衡
+4. 调整饱和度
+5. 添加锐化
+6. 选择适合的滤镜或预设
+7. 导出合适尺寸
+\`\`\`
+
+### 4.3 适合手机的修图技巧
+**提亮阴影：** 手机传感器动态范围有限，适当提亮阴影
+
+**减少清晰度：** 手机照片经常偏锐利，适当降低
+
+**增加颗粒：** 增加一点颗粒感，模拟胶片质感
+
+## 5. 手机配件
+
+### 5.1 实用的手机摄影配件
+- 小型三脚架（八爪鱼三脚架）
+- 附加镜头（广角/微距）
+- 手机稳定器（视频拍摄）
+- 补光灯（人像拍摄）
+- 手机快门遥控器
+
+## 结论
+
+手机摄影最重要的不是设备，而是拍摄者的眼光和思考。用手机练习构图、捕捉光线、记录生活，这些经验在任何相机上都适用。
+
+记住，最好的照片不是用最好的相机拍的，而是用心去拍的。手机只是工具，真正创造照片的是你。`,
+        date: "2024-04-25",
+        category: "摄影技巧",
+        tags: ["手机摄影", "技巧", "构图", "后期", "APP"],
+        views: 367,
+        likes: 78,
+        readingTime: 5,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop"
+    },
+    {
+        id: 8,
+        title: "摄影构图十大法则",
+        excerpt: "掌握十大经典构图法则，让你的照片从普通瞬间变成令人难忘的作品。",
+        content: `# 摄影构图十大法则
+
+构图是摄影的语言。同样的场景，不同的构图会产生完全不同的视觉效果。本文总结十大构图法则，帮助你快速提升摄影水平。
+
+## 1. 三分法
+
+最基本的构图法则，将画面平均分成9格。
+
+**如何使用：**
+- 将主体放在交叉点上
+- 将地平线放在上下三分之一处
+- 将垂直线放在左右三分之一处
+
+\`\`\`
+┌────┬────┬────┐
+│    │    │    │
+│    │ ●  │    │
+├────┼────┼────┤
+│    │    │    │
+│    │    │    │
+├────┼────┼────┤
+│    │    │    │
+│    │    │    │
+└────┴────┴────┘
+
+● = 视觉中心点
+\`\`\`
+
+## 2. 引导线
+
+利用线条引导观众的视线到主体。
+
+**常见的引导线：**
+- 道路和铁轨
+- 河流和海岸线
+- 建筑线条
+- 桥栏杆
+- 光影线条
+
+## 3. 框架构图
+
+使用前景元素框住主体，增加画面层次感。
+
+**常见的框架：**
+- 门窗和拱门
+- 树枝和树叶
+- 镜面反射
+- 人群间隙
+
+**框架构图的作用：**
+1. 突出主体
+2. 增加深度感
+3. 提供环境信息
+4. 营造窥视感
+
+## 4. 对称与平衡
+
+对称构图给人以稳定、庄重的感觉。
+
+**适用场景：**
+- 建筑摄影
+- 水面倒影
+- 反射面
+- 正式肖像
+
+**打破对称：**
+在对称画面中加入一个不对称的元素，增加趣味性。
+
+## 5. 前景与纵深
+
+在前景、中景、背景中安排层次。
+
+\`\`\`composition
+前景：增加画面深度和空间感
+中景：主体所在的位置
+背景：提供环境和氛围
+
+示例：拍摄山脉
+前景：一簇野花
+中景：山脉主体
+背景：天空和云彩
+\`\`\`
+
+## 6. 负空间
+
+大量留白突出主体，创造简约美。
+
+**负空间的运用：**
+- 大片天空突出孤独感
+- 大面积水面突出宁静感
+- 纯色背景突出主体轮廓
+
+## 7. 对角线构图
+
+利用对角线创造动感和活力。
+
+**对角线的作用：**
+- 增加画面张力
+- 引导视线移动
+- 表现动感
+- 平衡画面
+
+## 8. 图案与纹理
+
+人类的视觉对重复的图案有天然的吸引力。
+
+**拍摄要点：**
+- 寻找重复的元素
+- 从特殊角度拍摄
+- 用光线突出纹理
+- 在重复中寻找不同
+
+## 9. 色彩的对比与和谐
+
+**对比色：**
+- 红-绿
+- 蓝-橙
+- 黄-紫
+
+**和谐色：**
+- 相邻色（蓝色-紫色）
+- 同色系（深绿-浅绿）
+- 冷暖调搭配
+
+## 10. 留白与简约
+
+"少即是多"——去掉画面中多余的元素。
+
+**如何做减法：**
+1. 靠近拍摄
+2. 改变角度避开杂乱背景
+3. 使用大光圈虚化背景
+4. 长焦压缩画面
+5. 后期裁剪
+
+## 综合运用
+
+好的构图往往是多种法则的综合运用。
+
+\`\`\`example
+实战案例：拍摄城市街角
+
+1. 三分法：将行人放在右侧三分之一处
+2. 引导线：利用街道线条引导视线
+3. 框架构图：利用拱廊框住场景
+4. 留白：留给行人行进方向空间
+5. 色彩对比：冷色建筑与暖色灯光的对比
+\`\`\`
+
+## 结论
+
+构图法则不是死板的教条，而是创作的指南。先熟练掌握这些法则，然后在实际拍摄中找到自己的风格。
+
+记住，最好的构图是让人感觉到"就应该这样拍"，而不是让人注意到"这个构图很特别"。当构图成为本能，你就能更专注于捕捉瞬间和表达情感。`,
+        date: "2024-04-15",
+        category: "摄影技巧",
+        tags: ["构图", "法则", "三分法", "引导线", "摄影基础"],
+        views: 423,
+        likes: 89,
+        readingTime: 6,
+        featured: false,
+        image: "https://images.unsplash.com/photo-1450133064473-7102420ea88c?w=800&h=400&fit=crop"
+    }
+];
+
+// 页面初始化
+document.addEventListener('DOMContentLoaded', function() {
+    // 初始化移动端菜单
+    initMobileMenu();
+    
+    // 根据当前页面加载相应内容
+    const currentPage = getCurrentPage();
+    
+    switch(currentPage) {
+        case 'index':
+            loadPosts();
+            initSearch();
+            break;
+        case 'articles':
+            initArticlesPage();
+            break;
+        case 'tags':
+            initTagsPage();
+            break;
+        case 'about':
+            // 关于页面不需要特殊初始化
+            break;
+        case 'article':
+            initArticlePage();
+            break;
+    }
+});
+
+// 获取当前页面
+function getCurrentPage() {
+    const path = window.location.pathname;
+    const page = path.split('/').pop() || 'index.html';
+    
+    if (page === 'index.html' || page === '' || page === '/') {
+        return 'index';
+    } else if (page === 'articles.html') {
+        return 'articles';
+    } else if (page === 'tags.html') {
+        return 'tags';
+    } else if (page === 'about.html') {
+        return 'about';
+    } else if (page === 'article.html') {
+        return 'article';
+    }
+    return 'index';
+}
+
+// 初始化移动端菜单
+function initMobileMenu() {
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-nav-link');
+    
+    if (menuBtn) {
+        menuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        });
+    }
+    
+    // 点击菜单项关闭菜单
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // 点击菜单外部关闭菜单
+    mobileMenu.addEventListener('click', function(e) {
+        if (e.target === mobileMenu) {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}
+
+// 首页：加载文章
+function loadPosts() {
+    const postsContainer = document.getElementById('posts-container');
+    if (!postsContainer) return;
+    
+    // 显示前6篇文章
+    const postsToShow = blogPosts.slice(0, 6);
+    
+    postsContainer.innerHTML = postsToShow.map(post => createPostCard(post)).join('');
+    
+    // 加载更多功能
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    if (loadMoreBtn) {
+        let currentCount = 6;
+        
+        loadMoreBtn.addEventListener('click', function() {
+            const morePosts = blogPosts.slice(currentCount, currentCount + 3);
+            if (morePosts.length > 0) {
+                morePosts.forEach(post => {
+                    postsContainer.innerHTML += createPostCard(post);
+                });
+                currentCount += 3;
+                
+                // 如果没有更多文章，隐藏按钮
+                if (currentCount >= blogPosts.length) {
+                    loadMoreBtn.style.display = 'none';
+                }
+            }
+        });
+    }
+}
+
+// 创建文章卡片
+function createPostCard(post) {
+    return `
+        <article class="featured-card fade-in" data-id="${post.id}">
+            <div class="featured-image">
+                <img src="${post.image}" alt="${post.title}" loading="lazy">
+                <div class="category-badge">${post.category}</div>
+            </div>
+            <div class="featured-content">
+                <div class="meta-info">
+                    <span class="date"><i class="far fa-calendar"></i> ${post.date}</span>
+                    <span class="views"><i class="far fa-eye"></i> ${post.views}</span>
+                    <span class="reading-time"><i class="far fa-clock"></i> ${post.readingTime}分钟阅读</span>
+                </div>
+                <h3 class="featured-title">${post.title}</h3>
+                <p class="featured-excerpt">${post.excerpt}</p>
+                <div class="tags">
+                    ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+                <a href="article.html?id=${post.id}" class="read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </article>
+    `;
+}
+
+// 初始化搜索功能
+function initSearch() {
+    const searchInput = document.getElementById('search-input');
+    const searchBtn = document.getElementById('search-btn');
+    
+    if (searchInput && searchBtn) {
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+    }
+}
+
+// 执行搜索
+function performSearch() {
+    const searchInput = document.getElementById('search-input');
+    const query = searchInput.value.trim().toLowerCase();
+    
+    if (!query) {
+        alert('请输入搜索关键词');
+        return;
+    }
+    
+    // 过滤文章
+    const results = blogPosts.filter(post => 
+        post.title.toLowerCase().includes(query) ||
+        post.excerpt.toLowerCase().includes(query) ||
+        post.tags.some(tag => tag.toLowerCase().includes(query)) ||
+        post.content.toLowerCase().includes(query)
+    );
+    
+    if (results.length === 0) {
+        alert(`没有找到包含"${query}"的文章`);
+        return;
+    }
+    
+    // 跳转到文章列表页并显示搜索结果
+    const searchParams = new URLSearchParams();
+    searchParams.set('search', query);
+    window.location.href = `articles.html?${searchParams.toString()}`;
+}
+
+// 文章列表页初始化
+function initArticlesPage() {
+    // 获取URL参数
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQuery = urlParams.get('search');
+    const category = urlParams.get('category') || 'all';
+    const sort = urlParams.get('sort') || 'newest';
+    
+    // 加载文章
+    loadArticles({
+        search: searchQuery,
+        category: category,
+        sort: sort
+    });
+    
+    // 初始化筛选功能
+    initFilters();
+    
+    // 初始化视图切换
+    initViewToggle();
+    
+    // 初始化分类点击
+    initCategoryLinks();
+}
+
+// 加载文章列表
+function loadArticles(filters = {}) {
+    const container = document.getElementById('articles-container');
+    const countElement = document.getElementById('articles-count');
+    if (!container) return;
+    
+    // 过滤文章
+    let filteredPosts = [...blogPosts];
+    
+    // 搜索过滤
+    if (filters.search) {
+        const query = filters.search.toLowerCase();
+        filteredPosts = filteredPosts.filter(post => 
+            post.title.toLowerCase().includes(query) ||
+            post.excerpt.toLowerCase().includes(query) ||
+            post.tags.some(tag => tag.toLowerCase().includes(query))
+        );
+    }
+    
+    // 类别过滤
+    if (filters.category && filters.category !== 'all') {
+        filteredPosts = filteredPosts.filter(post => post.category === filters.category);
+    }
+    
+    // 排序
+    switch(filters.sort) {
+        case 'newest':
+            filteredPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+            break;
+        case 'oldest':
+            filteredPosts.sort((a, b) => new Date(a.date) - new Date(b.date));
+            break;
+        case 'popular':
+            filteredPosts.sort((a, b) => b.views - a.views);
+            break;
+    }
+    
+    // 更新计数
+    if (countElement) {
+        countElement.textContent = `所有文章 (${filteredPosts.length}篇)`;
+    }
+    
+    // 渲染文章
+    if (filteredPosts.length === 0) {
+        container.innerHTML = `
+            <div class="no-results">
+                <i class="fas fa-search fa-3x"></i>
+                <h3>没有找到符合条件的文章</h3>
+                <p>尝试使用不同的关键词或筛选条件</p>
+            </div>
+        `;
+    } else {
+        container.innerHTML = filteredPosts.map(post => createArticleItem(post)).join('');
+    }
+    
+    // 更新分页
+    updatePagination(filteredPosts.length);
+}
+
+// 创建文章列表项
+function createArticleItem(post) {
+    return `
+        <article class="article-item fade-in" data-id="${post.id}">
+            <div class="article-item-image">
+                <img src="${post.image}" alt="${post.title}" loading="lazy">
+            </div>
+            <div class="article-item-content">
+                <div class="article-item-meta">
+                    <span class="category">${post.category}</span>
+                    <span class="date">${post.date}</span>
+                    <span class="views"><i class="far fa-eye"></i> ${post.views}</span>
+                </div>
+                <h3 class="article-item-title">
+                    <a href="article.html?id=${post.id}">${post.title}</a>
+                </h3>
+                <p class="article-item-excerpt">${post.excerpt}</p>
+                <div class="article-item-footer">
+                    <div class="tags">
+                        ${post.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                    <a href="article.html?id=${post.id}" class="read-more">阅读全文 <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </article>
+    `;
+}
+
+// 初始化筛选功能
+function initFilters() {
+    const categoryFilter = document.getElementById('category-filter');
+    const sortFilter = document.getElementById('sort-filter');
+    
+    if (categoryFilter) {
+        categoryFilter.addEventListener('change', function() {
+            updateArticles();
+        });
+    }
+    
+    if (sortFilter) {
+        sortFilter.addEventListener('change', function() {
+            updateArticles();
+        });
+    }
+}
+
+// 初始化视图切换
+function initViewToggle() {
+    const gridViewBtn = document.getElementById('grid-view-btn');
+    const listViewBtn = document.getElementById('list-view-btn');
+    const container = document.getElementById('articles-container');
+    
+    if (gridViewBtn && listViewBtn && container) {
+        gridViewBtn.addEventListener('click', function() {
+            gridViewBtn.classList.add('active');
+            listViewBtn.classList.remove('active');
+            container.classList.remove('list-view');
+            container.classList.add('grid-view');
+        });
+        
+        listViewBtn.addEventListener('click', function() {
+            listViewBtn.classList.add('active');
+            gridViewBtn.classList.remove('active');
+            container.classList.remove('grid-view');
+            container.classList.add('list-view');
+        });
+    }
+}
+
+// 初始化分类链接
+function initCategoryLinks() {
+    const categoryLinks = document.querySelectorAll('.category-link');
+    
+    categoryLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const category = this.dataset.category;
+            
+            // 更新URL
+            const urlParams = new URLSearchParams(window.location.search);
+            if (category === 'all') {
+                urlParams.delete('category');
+            } else {
+                urlParams.set('category', category);
+            }
+            
+            // 重新加载文章
+            loadArticles({
+                category: category,
+                sort: urlParams.get('sort') || 'newest'
+            });
+        });
+    });
+}
+
+// 更新文章列表
+function updateArticles() {
+    const categoryFilter = document.getElementById('category-filter');
+    const sortFilter = document.getElementById('sort-filter');
+    
+    loadArticles({
+        category: categoryFilter ? categoryFilter.value : 'all',
+        sort: sortFilter ? sortFilter.value : 'newest'
+    });
+}
+
+// 更新分页
+function updatePagination(totalArticles) {
+    const pagination = document.getElementById('pagination');
+    if (!pagination) return;
+    
+    const pageSize = 6;
+    const totalPages = Math.ceil(totalArticles / pageSize);
+    
+    if (totalPages <= 1) {
+        pagination.innerHTML = '';
+        return;
+    }
+    
+    let paginationHTML = '<button class="page-btn"><i class="fas fa-chevron-left"></i></button>';
+    
+    for (let i = 1; i <= totalPages; i++) {
+        paginationHTML += `<button class="page-btn ${i === 1 ? 'active' : ''}">${i}</button>`;
+    }
+    
+    paginationHTML += '<button class="page-btn"><i class="fas fa-chevron-right"></i></button>';
+    pagination.innerHTML = paginationHTML;
+    
+    // 分页点击事件
+    const pageBtns = pagination.querySelectorAll('.page-btn');
+    pageBtns.forEach((btn, index) => {
+        btn.addEventListener('click', function() {
+            // 处理分页逻辑
+            console.log(`跳转到第 ${index} 页`);
+        });
+    });
+}
+
+// 标签页面初始化
+function initTagsPage() {
+    // 生成标签数据
+    const tagsData = generateTagsData();
+    
+    // 渲染标签云
+    renderTagCloud(tagsData);
+    
+    // 渲染标签列表
+    renderTagsList(tagsData);
+    
+    // 初始化标签搜索
+    initTagSearch();
+    
+    // 初始化标签点击
+    initTagClicks();
+}
+
+// 生成标签数据
+function generateTagsData() {
+    const tagsMap = {};
+    
+    blogPosts.forEach(post => {
+        post.tags.forEach(tag => {
+            if (!tagsMap[tag]) {
+                tagsMap[tag] = {
+                    name: tag,
+                    count: 0,
+                    articles: []
+                };
+            }
+            tagsMap[tag].count++;
+            tagsMap[tag].articles.push(post);
+        });
+    });
+    
+    return Object.values(tagsMap).sort((a, b) => b.count - a.count);
+}
+
+// 渲染标签云
+function renderTagCloud(tagsData) {
+    const tagCloud = document.getElementById('tag-cloud');
+    if (!tagCloud) return;
+    
+    // 计算字体大小范围
+    const maxCount = Math.max(...tagsData.map(tag => tag.count));
+    const minFontSize = 14;
+    const maxFontSize = 32;
+    
+    tagCloud.innerHTML = tagsData.map(tag => {
+        // 根据文章数量计算字体大小
+        const fontSize = minFontSize + (tag.count / maxCount) * (maxFontSize - minFontSize);
+        
+        return `
+            <a href="#" class="tag-cloud-item" data-tag="${tag.name}" 
+               style="font-size: ${fontSize}px;">
+                ${tag.name} (${tag.count})
+            </a>
+        `;
+    }).join('');
+}
+
+// 渲染标签列表
+function renderTagsList(tagsData) {
+    const tagsList = document.getElementById('tags-list');
+    const totalTags = document.getElementById('total-tags');
+    const mostArticlesTag = document.getElementById('most-articles-tag');
+    const avgArticles = document.getElementById('avg-articles');
+    
+    if (!tagsList) return;
+    
+    // 渲染标签列表
+    tagsList.innerHTML = tagsData.map(tag => `
+        <li>
+            <a href="#" class="tag-list-item" data-tag="${tag.name}">
+                <span class="tag-name">${tag.name}</span>
+                <span class="tag-count">${tag.count}</span>
+            </a>
+        </li>
+    `).join('');
+    
+    // 更新统计信息
+    if (totalTags) {
+        totalTags.textContent = tagsData.length;
+    }
+    
+    if (mostArticlesTag && tagsData.length > 0) {
+        mostArticlesTag.textContent = tagsData[0].name;
+    }
+    
+    if (avgArticles && tagsData.length > 0) {
+        const avg = tagsData.reduce((sum, tag) => sum + tag.count, 0) / tagsData.length;
+        avgArticles.textContent = avg.toFixed(1);
+    }
+}
+
+// 初始化标签搜索
+function initTagSearch() {
+    const searchInput = document.getElementById('tag-search-input');
+    const searchBtn = document.getElementById('tag-search-btn');
+    
+    if (searchInput && searchBtn) {
+        searchBtn.addEventListener('click', function() {
+            const query = searchInput.value.trim().toLowerCase();
+            filterTags(query);
+        });
+        
+        searchInput.addEventListener('input', function() {
+            const query = this.value.trim().toLowerCase();
+            filterTags(query);
+        });
+    }
+}
+
+// 过滤标签
+function filterTags(query) {
+    const tagItems = document.querySelectorAll('.tag-list-item, .tag-cloud-item');
+    
+    tagItems.forEach(item => {
+        const tagName = item.dataset.tag.toLowerCase();
+        if (query === '' || tagName.includes(query)) {
+            item.style.display = '';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+// 初始化标签点击
+function initTagClicks() {
+    // 标签云点击
+    document.addEventListener('click', function(e) {
+        const tagElement = e.target.closest('[data-tag]');
+        if (tagElement && (tagElement.classList.contains('tag-cloud-item') || 
+                           tagElement.classList.contains('tag-list-item'))) {
+            e.preventDefault();
+            const tagName = tagElement.dataset.tag;
+            showTagArticles(tagName);
+        }
+        
+        // 返回所有标签按钮
+        const backBtn = e.target.closest('#back-to-all-tags-btn');
+        if (backBtn) {
+            e.preventDefault();
+            showAllTags();
+        }
+    });
+}
+
+// 显示标签文章
+function showTagArticles(tagName) {
+    const tagsData = generateTagsData();
+    const tagData = tagsData.find(tag => tag.name === tagName);
+    
+    if (!tagData) return;
+    
+    // 更新UI状态
+    document.getElementById('current-tag-title').textContent = `#${tagName}`;
+    document.getElementById('tag-articles-count').textContent = `${tagData.count} 篇文章`;
+    document.getElementById('no-tag-selected').style.display = 'none';
+    document.getElementById('back-to-tags').style.display = 'block';
+    
+    // 高亮选中的标签
+    document.querySelectorAll('[data-tag]').forEach(item => {
+        item.classList.remove('active');
+        if (item.dataset.tag === tagName) {
+            item.classList.add('active');
+        }
+    });
+    
+    // 渲染标签文章
+    const container = document.getElementById('tag-articles-container');
+    container.innerHTML = tagData.articles.map(post => createArticleItem(post)).join('');
+}
+
+// 显示所有标签
+function showAllTags() {
+    document.getElementById('current-tag-title').textContent = '选择标签查看文章';
+    document.getElementById('tag-articles-count').textContent = '0 篇文章';
+    document.getElementById('no-tag-selected').style.display = 'block';
+    document.getElementById('back-to-tags').style.display = 'none';
+    document.getElementById('tag-articles-container').innerHTML = '';
+    
+    // 移除标签高亮
+    document.querySelectorAll('[data-tag]').forEach(item => {
+        item.classList.remove('active');
+    });
+}
+
+// 文章详情页初始化
+function initArticlePage() {
+    // 获取文章ID
+    const urlParams = new URLSearchParams(window.location.search);
+    const articleId = parseInt(urlParams.get('id')) || 1;
+    
+    // 加载文章
+    loadArticle(articleId);
+    
+    // 初始化交互功能
+    initArticleInteractions();
+}
+
+// 加载文章
+function loadArticle(id) {
+    const post = blogPosts.find(p => p.id === id);
+    if (!post) {
+        // 文章不存在，跳转到首页
+        window.location.href = 'index.html';
+        return;
+    }
+    
+    // 更新页面标题
+    document.title = `${post.title} | wwz的博客`;
+    
+    // 更新文章信息
+    document.getElementById('article-title').textContent = post.title;
+    document.getElementById('article-category').textContent = post.category;
+    document.getElementById('article-date').textContent = post.date;
+    document.getElementById('article-views').innerHTML = `<i class="far fa-eye"></i> <span>${post.views}</span>`;
+    document.getElementById('article-reading-time').innerHTML = `<i class="far fa-clock"></i> <span>${post.readingTime}分钟阅读</span>`;
+    document.getElementById('article-image').src = post.image;
+    document.getElementById('article-image').alt = post.title;
+    document.getElementById('like-count').textContent = post.likes;
+    
+    // 渲染标签
+    const tagsContainer = document.getElementById('article-tags');
+    tagsContainer.innerHTML = post.tags.map(tag => 
+        `<a href="tags.html?tag=${encodeURIComponent(tag)}" class="tag">${tag}</a>`
+    ).join('');
+    
+    // 渲染文章内容
+    renderArticleContent(post);
+    
+    // 生成目录
+    generateTableOfContents(post.content);
+    
+    // 加载相关文章
+    loadRelatedArticles(post);
+    
+    // 更新上一篇/下一篇
+    updateArticleNavigation(id);
+    
+    // 更新文章浏览量（模拟）
+    updateArticleViews(id);
+}
+
+// 渲染文章内容
+function renderArticleContent(post) {
+    const contentContainer = document.getElementById('article-body');
+    if (!contentContainer) return;
+    
+    // 使用marked渲染Markdown
+    if (typeof marked !== 'undefined') {
+        const htmlContent = marked.parse(post.content);
+        contentContainer.querySelector('.markdown-content').innerHTML = htmlContent;
+        
+        // 高亮代码块
+        if (typeof Prism !== 'undefined') {
+            Prism.highlightAll();
+        }
+    } else {
+        contentContainer.querySelector('.markdown-content').innerHTML = 
+            `<p>${post.content}</p>`;
+    }
+}
+
+// 生成目录
+function generateTableOfContents(content) {
+    const tocContainer = document.getElementById('table-of-contents');
+    if (!tocContainer) return;
+    
+    // 提取标题
+    const headingRegex = /^#{2,4}\s+(.+)$/gm;
+    const headings = [];
+    let match;
+    
+    while ((match = headingRegex.exec(content)) !== null) {
+        const level = match[0].match(/^#+/)[0].length;
+        const title = match[1].trim();
+        const id = title.toLowerCase().replace(/[^a-z0-9\u4e00-\u9fa5]+/g, '-');
+        
+        headings.push({
+            level: level,
+            title: title,
+            id: id
+        });
+    }
+    
+    if (headings.length === 0) {
+        tocContainer.innerHTML = '<p>本文暂无目录</p>';
+        return;
+    }
+    
+    // 生成目录HTML
+    let tocHTML = '<ul>';
+    let currentLevel = 2;
+    
+    headings.forEach(heading => {
+        // 处理层级关系
+        if (heading.level > currentLevel) {
+            tocHTML += '<ul>';
+        } else if (heading.level < currentLevel) {
+            tocHTML += '</ul>';
+        }
+        
+        tocHTML += `
+            <li>
+                <a href="#${heading.id}" data-toc-id="${heading.id}">
+                    ${heading.title}
+                </a>
+            </li>
+        `;
+        
+        currentLevel = heading.level;
+    });
+    
+    // 关闭未闭合的ul标签
+    while (currentLevel > 2) {
+        tocHTML += '</ul>';
+        currentLevel--;
+    }
+    
+    tocHTML += '</ul>';
+    tocContainer.innerHTML = tocHTML;
+    
+    // 为文章中的标题添加ID
+    setTimeout(() => {
+        const markdownContent = document.querySelector('.markdown-content');
+        if (markdownContent) {
+            headings.forEach(heading => {
+                const headingElement = Array.from(markdownContent.querySelectorAll('h2, h3, h4'))
+                    .find(h => h.textContent.trim() === heading.title);
+                
+                if (headingElement) {
+                    headingElement.id = heading.id;
+                }
+            });
+        }
+        
+        // 目录点击事件
+        const tocLinks = tocContainer.querySelectorAll('a');
+        tocLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    }, 100);
+}
+
+// 加载相关文章
+function loadRelatedArticles(currentPost) {
+    const relatedContainer = document.getElementById('related-articles');
+    if (!relatedContainer) return;
+    
+    // 查找相关文章（基于标签匹配）
+    const relatedPosts = blogPosts
+        .filter(post => post.id !== currentPost.id)
+        .map(post => {
+            const commonTags = post.tags.filter(tag => 
+                currentPost.tags.includes(tag)
+            ).length;
+            return { post, commonTags };
+        })
+        .filter(item => item.commonTags > 0)
+        .sort((a, b) => b.commonTags - a.commonTags)
+        .slice(0, 3)
+        .map(item => item.post);
+    
+    if (relatedPosts.length === 0) {
+        // 如果没有相关文章，显示热门文章
+        relatedPosts.push(...blogPosts
+            .filter(post => post.id !== currentPost.id)
+            .sort((a, b) => b.views - a.views)
+            .slice(0, 3));
+    }
+    
+    // 渲染相关文章
+    relatedContainer.innerHTML = relatedPosts.map(post => `
+        <article class="related-card">
+            <div class="related-image">
+                <img src="${post.image}" alt="${post.title}" loading="lazy">
+            </div>
+            <div class="related-content">
+                <h4 class="related-title">
+                    <a href="article.html?id=${post.id}">${post.title}</a>
+                </h4>
+                <div class="related-meta">
+                    <span class="date">${post.date}</span>
+                    <span class="views"><i class="far fa-eye"></i> ${post.views}</span>
+                </div>
+                <p class="related-excerpt">${post.excerpt}</p>
+            </div>
+        </article>
+    `).join('');
+}
+
+// 更新文章导航
+function updateArticleNavigation(currentId) {
+    const currentIndex = blogPosts.findIndex(post => post.id === currentId);
+    
+    if (currentIndex > 0) {
+        const prevPost = blogPosts[currentIndex - 1];
+        document.getElementById('prev-article').href = `article.html?id=${prevPost.id}`;
+        document.getElementById('prev-title').textContent = prevPost.title;
+        document.getElementById('prev-article').style.display = 'flex';
+    } else {
+        document.getElementById('prev-article').style.display = 'none';
+    }
+    
+    if (currentIndex < blogPosts.length - 1) {
+        const nextPost = blogPosts[currentIndex + 1];
+        document.getElementById('next-article').href = `article.html?id=${nextPost.id}`;
+        document.getElementById('next-title').textContent = nextPost.title;
+        document.getElementById('next-article').style.display = 'flex';
+    } else {
+        document.getElementById('next-article').style.display = 'none';
+    }
+}
+
+// 更新文章浏览量（模拟）
+function updateArticleViews(id) {
+    // 在实际应用中，这里应该调用API更新数据库
+    const post = blogPosts.find(p => p.id === id);
+    if (post) {
+        post.views++;
+        const viewsElement = document.querySelector(`[data-id="${id}"] .views span, #article-views span`);
+        if (viewsElement) {
+            viewsElement.textContent = post.views;
+        }
+    }
+}
+
+// 初始化文章交互
+function initArticleInteractions() {
+    // 点赞功能
+    const likeBtn = document.getElementById('like-btn');
+    if (likeBtn) {
+        likeBtn.addEventListener('click', function() {
+            const likeCount = document.getElementById('like-count');
+            let count = parseInt(likeCount.textContent) || 0;
+            count++;
+            likeCount.textContent = count;
+            
+            // 更新按钮状态
+            likeBtn.innerHTML = `<i class="fas fa-heart"></i> <span>已点赞</span> <span class="like-count">${count}</span>`;
+            likeBtn.classList.add('liked');
+            likeBtn.disabled = true;
+            
+            // 显示动画效果
+            likeBtn.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                likeBtn.style.transform = 'scale(1)';
+            }, 300);
+            
+            // 在实际应用中，这里应该调用API保存点赞状态
+        });
+    }
+    
+    // 分享功能
+    const shareBtn = document.getElementById('share-btn');
+    if (shareBtn) {
+        shareBtn.addEventListener('click', function() {
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    text: document.querySelector('#article-title').textContent,
+                    url: window.location.href
+                });
+            } else {
+                // 复制链接到剪贴板
+                navigator.clipboard.writeText(window.location.href)
+                    .then(() => {
+                        alert('链接已复制到剪贴板！');
+                    })
+                    .catch(() => {
+                        prompt('请手动复制链接：', window.location.href);
+                    });
+            }
+        });
+    }
+    
+    // 收藏功能
+    const saveBtn = document.getElementById('save-btn');
+    if (saveBtn) {
+        saveBtn.addEventListener('click', function() {
+            const articleId = new URLSearchParams(window.location.search).get('id');
+            
+            // 切换收藏状态
+            if (this.classList.contains('saved')) {
+                this.classList.remove('saved');
+                this.innerHTML = '<i class="far fa-bookmark"></i> <span>收藏</span>';
+                // 从收藏夹移除
+                removeFromFavorites(articleId);
+            } else {
+                this.classList.add('saved');
+                this.innerHTML = '<i class="fas fa-bookmark"></i> <span>已收藏</span>';
+                // 添加到收藏夹
+                addToFavorites(articleId);
+            }
+            
+            // 动画效果
+            this.style.transform = 'scale(1.1)';
+            setTimeout(() => {
+                this.style.transform = 'scale(1)';
+            }, 300);
+        });
+        
+        // 检查是否已收藏
+        checkFavoriteStatus();
+    }
+}
+
+// 添加到收藏夹
+function addToFavorites(articleId) {
+    let favorites = JSON.parse(localStorage.getItem('blog_favorites') || '[]');
+    if (!favorites.includes(articleId)) {
+        favorites.push(articleId);
+        localStorage.setItem('blog_favorites', JSON.stringify(favorites));
+    }
+}
+
+// 从收藏夹移除
+function removeFromFavorites(articleId) {
+    let favorites = JSON.parse(localStorage.getItem('blog_favorites') || '[]');
+    favorites = favorites.filter(id => id !== articleId);
+    localStorage.setItem('blog_favorites', JSON.stringify(favorites));
+}
+
+// 检查收藏状态
+function checkFavoriteStatus() {
+    const saveBtn = document.getElementById('save-btn');
+    if (!saveBtn) return;
+    
+    const articleId = new URLSearchParams(window.location.search).get('id');
+    const favorites = JSON.parse(localStorage.getItem('blog_favorites') || '[]');
+    
+    if (favorites.includes(articleId)) {
+        saveBtn.classList.add('saved');
+        saveBtn.innerHTML = '<i class="fas fa-bookmark"></i> <span>已收藏</span>';
+    }
+}
+
+// 工具函数：格式化日期
+function formatDate(dateString) {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('zh-CN', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+}
+
+// 工具函数：防抖
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
+// 工具函数：节流
+function throttle(func, limit) {
+    let inThrottle;
+    return function(...args) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
