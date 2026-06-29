@@ -593,16 +593,55 @@
         function parseBlogPosts(content) {
             if (!content) return [];
             try {
-                const match = content.content.match(/const blogPosts\s*=\s*(\[[\s\S]*?\]);/);
-                if (!match) {
-                    // Try loading from localStorage backup or return defaults
-                    return getDefaultArticles();
+                const str = content.content;
+                // Find `const blogPosts = [`
+                const startMarker = 'const blogPosts = [';
+                const startIdx = str.indexOf(startMarker);
+                if (startIdx === -1) return getDefaultArticles();
+                
+                // Bracket counting to find matching `];`
+                const arrayStart = startIdx + startMarker.length - 1; // position of '['
+                let depth = 1;
+                let i = arrayStart + 1;
+                let inString = false;
+                let stringChar = null;
+                let inTemplate = false;
+                
+                while (i < str.length && depth > 0) {
+                    const ch = str[i];
+                    const prev = i > 0 ? str[i-1] : '';
+                    
+                    // Handle strings and template literals
+                    if (!inTemplate && (ch === '"' || ch === "'") && prev !== '\\') {
+                        if (!inString) {
+                            inString = true;
+                            stringChar = ch;
+                        } else if (ch === stringChar) {
+                            inString = false;
+                            stringChar = null;
+                        }
+                    }
+                    // Handle template literals (backticks)
+                    if (!inString && ch === '`' && prev !== '\\') {
+                        inTemplate = !inTemplate;
+                    }
+                    
+                    // Only count brackets outside strings/templates
+                    if (!inString && !inTemplate) {
+                        if (ch === '[' || ch === '{') depth++;
+                        else if (ch === ']' || ch === '}') depth--;
+                    }
+                    
+                    i++;
                 }
-                // Safely evaluate the array
-                const posts = Function('"use strict"; return (' + match[1] + ')')();
+                
+                const arrayStr = str.substring(arrayStart, i);
+                
+                // Safely evaluate
+                const posts = Function('"use strict"; return (' + arrayStr + ')')();
                 return posts.map(p => ({ ...p }));
             } catch(e) {
-                console.error('Parse error:', e);
+                console.error('Parse error:', e.message);
                 return getDefaultArticles();
             }
         }
