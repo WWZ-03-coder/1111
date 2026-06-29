@@ -1,0 +1,42 @@
+{
+  "blog_name": "wwz的博客",
+  "blog_subtitle": "摄影师 · 用镜头记录世界的美好",
+  "categories": [
+    "街拍",
+    "人像摄影",
+    "风光摄影",
+    "器材评测",
+    "后期教程",
+    "摄影技巧"
+  ],
+  "about": {
+    "name": "摄影王sir",
+    "title": "摄影师",
+    "location": "凤阳",
+    "email": "2966869705@qq.com",
+    "bio": "用镜头记录世界的美好，热爱街头摄影和人像摄影。\n走过30多个国家，300多个城市，用相机讲述每一个动人的故事。",
+    "social": {
+      "weibo": "无",
+      "instagram": "无",
+      "weixin": "sgscn01",
+      "flickr": "无"
+    },
+    "equipment": {
+      "相机": [
+        "Sony A7R IV",
+        "Fujifilm X-T5",
+        "Leica M11"
+      ],
+      "镜头": [
+        "Sony 24-70mm F2.8 GM II",
+        "Fujifilm 35mm F1.4",
+        "Leica Summilux 50mm F1.4"
+      ],
+      "配件": [
+        "DJI RS 3",
+        "Peak Design 背包",
+        "Benro 三脚架"
+      ]
+    }
+  }
+}
