@@ -529,9 +529,13 @@
                 CONFIG.repo = repo;
                 CONFIG.owner = parts[0];
                 
-                // Save to localStorage
-                localStorage.setItem('blog_admin_token', token);
-                localStorage.setItem('blog_admin_repo', repo);
+                // Save to localStorage (browser may block it)
+                try {
+                    localStorage.setItem('blog_admin_token', token);
+                    localStorage.setItem('blog_admin_repo', repo);
+                } catch(e) {
+                    console.log('localStorage save failed:', e.message);
+                }
 
                 showToast('info', '正在连接 GitHub...');
                 
@@ -1126,12 +1130,16 @@
         }
 
         // ===== Init =====
-        // Load saved settings
+        // Load saved settings (with error handling for tracking prevention)
         document.addEventListener('DOMContentLoaded', function() {
-            const savedToken = localStorage.getItem('blog_admin_token');
-            const savedRepo = localStorage.getItem('blog_admin_repo');
-            if (savedToken) document.getElementById('token-input').value = savedToken;
-            if (savedRepo) document.getElementById('repo-input').value = savedRepo;
+            try {
+                const savedToken = localStorage.getItem('blog_admin_token');
+                const savedRepo = localStorage.getItem('blog_admin_repo');
+                if (savedToken) document.getElementById('token-input').value = savedToken;
+                if (savedRepo) document.getElementById('repo-input').value = savedRepo;
+            } catch(e) {
+                console.log('localStorage blocked by browser:', e.message);
+            }
         });
     </script>
 </body>
