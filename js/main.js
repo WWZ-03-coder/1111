@@ -1,7 +1,22 @@
 // 个人博客主JavaScript文件
 
 // 博客文章数据
-const blogPosts = [];
+const blogPosts = [
+    {
+        "title": "大家好，欢迎来到我的博客",
+        "excerpt": "测试后台1111...",
+        "content": "测试后台1111",
+        "date": "2026-06-29",
+        "category": "街拍",
+        "tags": [],
+        "featured": false,
+        "image": "",
+        "id": 1,
+        "views": 0,
+        "likes": 0,
+        "readingTime": 1
+    }
+];
 
 // 页面初始化
 document.addEventListener('DOMContentLoaded', function() {
