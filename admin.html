@@ -223,7 +223,7 @@
                 <a onclick="switchPage('articles')" id="nav-articles">
                     <i class="fas fa-newspaper"></i> 文章管理
                 </a>
-                <a onclick="switchPage('editor')" id="nav-editor">
+                <a onclick="newArticle()" id="nav-editor">
                     <i class="fas fa-pen-to-square"></i> 写文章
                 </a>
                 <a onclick="switchPage('about')" id="nav-about">
@@ -500,7 +500,7 @@
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" async></script>
     <script>
         // ===== Configuration =====
         let CONFIG = {
@@ -515,45 +515,51 @@
 
         // ===== Login =====
         function connectToGitHub() {
-            const token = document.getElementById('token-input').value.trim();
-            const repo = document.getElementById('repo-input').value.trim();
-            const errEl = document.getElementById('login-error');
-            
-            if (!token) { errEl.textContent = '请输入 GitHub Token'; errEl.style.display = 'block'; return; }
-            if (!repo) { errEl.textContent = '请输入仓库名'; errEl.style.display = 'block'; return; }
-            
-            const parts = repo.split('/');
-            CONFIG.token = token;
-            CONFIG.repo = repo;
-            CONFIG.owner = parts[0];
-            
-            // Save to localStorage
-            localStorage.setItem('blog_admin_token', token);
-            localStorage.setItem('blog_admin_repo', repo);
+            try {
+                const token = document.getElementById('token-input').value.trim();
+                const repo = document.getElementById('repo-input').value.trim();
+                const errEl = document.getElementById('login-error');
+                errEl.style.display = 'none';
+                
+                if (!token) { errEl.textContent = '请输入 GitHub Token'; errEl.style.display = 'block'; return; }
+                if (!repo) { errEl.textContent = '请输入仓库名'; errEl.style.display = 'block'; return; }
+                
+                const parts = repo.split('/');
+                CONFIG.token = token;
+                CONFIG.repo = repo;
+                CONFIG.owner = parts[0];
+                
+                // Save to localStorage
+                localStorage.setItem('blog_admin_token', token);
+                localStorage.setItem('blog_admin_repo', repo);
 
-            showToast('info', '正在连接 GitHub...');
-            
-            // Verify token and fetch data
-            fetch(`https://api.github.com/repos/${repo}`, {
-                headers: { 'Authorization': `token ${token}` }
-            })
-            .then(res => {
-                if (!res.ok) throw new Error('Token 无效或仓库不存在');
-                return fetchRepoFile('js/main.js');
-            })
-            .then(content => {
-                if (content) {
-                    blogPosts = parseBlogPosts(content);
-                }
-                document.getElementById('login-overlay').classList.add('hidden');
-                document.getElementById('app').classList.remove('hidden');
-                renderDashboard();
-                showToast('success', `已连接到 ${repo}，共 ${blogPosts.length} 篇文章`);
-            })
-            .catch(err => {
-                errEl.textContent = err.message;
-                errEl.style.display = 'block';
-            });
+                showToast('info', '正在连接 GitHub...');
+                
+                // Verify token and fetch data
+                fetch(`https://api.github.com/repos/${repo}`, {
+                    headers: { 'Authorization': `token ${token}` }
+                })
+                .then(res => {
+                    if (!res.ok) throw new Error('Token 无效或仓库不存在');
+                    return fetchRepoFile('js/main.js');
+                })
+                .then(content => {
+                    if (content) {
+                        blogPosts = parseBlogPosts(content);
+                    }
+                    document.getElementById('login-overlay').classList.add('hidden');
+                    document.getElementById('app').classList.remove('hidden');
+                    renderDashboard();
+                    showToast('success', `已连接到 ${repo}，共 ${blogPosts.length} 篇文章`);
+                })
+                .catch(err => {
+                    errEl.textContent = err.message;
+                    errEl.style.display = 'block';
+                });
+            } catch(e) {
+                document.getElementById('login-error').textContent = '发生错误: ' + e.message;
+                document.getElementById('login-error').style.display = 'block';
+            }
         }
 
         // ===== GitHub API =====
@@ -832,9 +838,13 @@
             const content = document.getElementById('edit-content').value;
             const preview = document.getElementById('preview-area');
             try {
-                preview.innerHTML = marked.parse(content || '*输入 Markdown 后在此预览...*');
+                if (typeof marked !== 'undefined' && marked.parse) {
+                    preview.innerHTML = marked.parse(content || '*输入 Markdown 后在此预览...*');
+                } else {
+                    preview.innerHTML = (content || '*输入 Markdown 后在此预览...*').replace(/\n/g, '<br>');
+                }
             } catch(e) {
-                preview.innerHTML = '<p style="color:var(--danger)">渲染错误</p>';
+                preview.innerHTML = '<p style="color:var(--danger)">渲染错误: ' + e.message + '</p>';
             }
         }
 
@@ -1039,7 +1049,7 @@
                         </div>
                     </div>
                 </div>
-                ${content ? '<div class="profile-content markdown-preview">' + marked.parse(content) + '</div>' : ''}
+                ${content ? '<div class="profile-content">' + (typeof marked !== 'undefined' ? marked.parse(content) : content.replace(/\n/g, '<br>')) + '</div>' : ''}
             </div>
         </main>
     </div>
