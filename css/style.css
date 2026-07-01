@@ -1351,6 +1351,7 @@ body {
     width: 100%;
     height: auto;
     display: block;
+    aspect-ratio: attr(width) / attr(height);
 }
 
 .article-body {
